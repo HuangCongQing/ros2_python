@@ -17,13 +17,14 @@ class PublisherNode(Node):
     
     def __init__(self, name):
         super().__init__(name)                                    # ROS2节点父类初始化
-        self.pub = self.create_publisher(String, "chatter", 10)   # 创建发布者对象（消息类型、话题名、队列长度）
-        self.timer = self.create_timer(0.5, self.timer_callback)  # 创建一个定时器（单位为秒的周期，定时执行的回调函数）
-        
+        self.pub = self.create_publisher(String, "chatter", 10)   # 创建发布者对象（消息类型、话题名、队列长度）self.create_publish()==========================================
+        self.timer = self.create_timer(0.5, self.timer_callback)  # 创建一个定时器（单位为秒的周期，定时执行的回调函数） 0.5 相当于1s两次
+    
+    # 被上面的self.create_timer调用
     def timer_callback(self):                                     # 创建定时器周期执行的回调函数
         msg = String()                                            # 创建一个String类型的消息对象
         msg.data = 'Hello World'                                  # 填充消息对象中的消息数据
-        self.pub.publish(msg)                                     # 发布话题消息
+        self.pub.publish(msg)                                     # 发布话题消息self.pub.publish(msg)========================================================================
         self.get_logger().info('Publishing: "%s"' % msg.data)     # 输出日志信息，提示已经完成话题发布
         
 def main(args=None):                                 # ROS2节点主入口main函数
