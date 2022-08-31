@@ -27,8 +27,8 @@ source install/local_setup.sh
 
 
 ## ros2_21_tutorials
-video: https://www.bilibili.com/video/BV16B4y1Q7jQ
-code: https://github.com/guyuehome/ros2_21_tutorials
+* video: https://www.bilibili.com/video/BV16B4y1Q7jQ
+* code: https://github.com/guyuehome/ros2_21_tutorials
 
 
 1. [learning_topic](ros2_21_ws/learning_topic)
