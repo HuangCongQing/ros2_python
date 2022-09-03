@@ -23,6 +23,7 @@ source install/local_setup.sh
 ## Tutorials
 * [订阅发布](tutorials_ws/src/01_publisher_and_subscriber.py)
 
+* rivz2可视化点云&bbox：https://github.com/HuangCongQing/Point-Clouds-Visualization/tree/master/3ros2_python
 
 
 
